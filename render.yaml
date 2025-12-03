@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: fastmcp-server
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python src/server.py
+    name: nitan-mcp-server
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node dist/index.js --transport=http --port=${PORT:-8000}
     plan: free
     autoDeploy: false
     envVars:
