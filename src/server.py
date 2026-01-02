@@ -8,7 +8,7 @@ from datetime import datetime
 mcp = FastMCP("Canvas LMS MCP Server")
 
 # Canvas API Configuration
-CANVAS_API_URL = os.environ.get("CANVAS_API_URL", "https://canvas.instructure.com/api/v1")
+CANVAS_API_URL = os.environ.get("CANVAS_API_URL", "")
 CANVAS_API_TOKEN = os.environ.get("CANVAS_API_TOKEN", "")
 
 def get_headers() -> dict:
